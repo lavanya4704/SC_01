@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Information</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1, h2 {
+            color: #005b96;
+        }
+        
+        /* Menu Bar Styles */
+        .menu-bar {
+            background-color: #005b96;
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+        }
+        
+        .menu-bar a {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        
+        .menu-bar a:hover {
+            background-color: #03396c;
+        }
+        
+        .active {
+            background-color: #03396c;
+            font-weight: bold;
+        }
+        
+        /* Content Sections */
+        .section {
+            display: none;
+            padding: 20px 0;
+        }
+        
+        .card {
+            background: #f5f9fc;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        
+        /* Home Section */
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            height: 300px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        
+        /* Stats Section */
+        .stats-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        
+        .stat-card {
+            background: white;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px;
+            width: 150px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        .confirmed { border-top: 3px solid #ff6b6b; }
+        .recovered { border-top: 3px solid #51cf66; }
+        .deaths { border-top: 3px solid #868e96; }
+        
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .menu-bar a {
+                padding: 10px 12px;
+                font-size: 14px;
+            }
+            
+            .stat-card {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-bar">
+        <a class="active" href="#home" onclick="showSection('home')">Home</a>
+        <a href="#symptoms" onclick="showSection('symptoms')">Symptoms</a>
+        <a href="#precautions" onclick="showSection('precautions')">Precautions</a>
+        <a href="#details" onclick="showSection('details')">Details</a>
+        <a href="#contact" onclick="showSection('contact')">Contact</a>
+    </div>
+    
+    <!-- Home Section -->
+    <div id="home" class="section" style="display: block;">
+        <div class="hero-image">
+            <div>
+                <h1>COVID-19 Information</h1>
+                <p>Stay informed about the coronavirus pandemic</p>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="card">
+                <h2>About COVID-19</h2>
+                <p>COVID-19 is an infectious disease caused by the SARS-CoV-2 virus. Most people experience mild to moderate respiratory illness and recover without special treatment. However, some become seriously ill and require medical attention.</p>
+                <p>Use the menu above to learn about symptoms, precautions, current statistics, and contact information.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Symptoms Section -->
+    <div id="symptoms" class="section">
+        <div class="container">
+            <h1>COVID-19 Symptoms</h1>
+            
+            <div class="card">
+                <h2>Common Symptoms</h2>
+                <ul>
+                    <li>Fever or chills</li>
+                    <li>Cough</li>
+                    <li>Shortness of breath or difficulty breathing</li>
+                    <li>Fatigue</li>
+                    <li>Muscle or body aches</li>
+                    <li>Headache</li>
+                    <li>New loss of taste or smell</li>
+                    <li>Sore throat</li>
+                    <li>Congestion or runny nose</li>
+                    <li>Nausea or vomiting</li>
+                    <li>Diarrhea</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h2>Emergency Warning Signs</h2>
+                <p>Seek medical attention immediately if you experience:</p>
+                <ul>
+                    <li>Trouble breathing</li>
+                    <li>Persistent pain or pressure in the chest</li>
+                    <li>New confusion</li>
+                    <li>Inability to wake or stay awake</li>
+                    <li>Pale, gray, or blue-colored skin, lips, or nail beds</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Precautions Section -->
+    <div id="precautions" class="section">
+        <div class="container">
+            <h1>COVID-19 Precautions</h1>
+            
+            <div class="card">
+                <h2>How to Protect Yourself</h2>
+                <ol>
+                    <li><strong>Get vaccinated</strong> - Vaccines are safe and effective at preventing severe illness</li>
+                    <li><strong>Wear a mask</strong> - In public indoor spaces, especially in areas of high transmission</li>
+                    <li><strong>Maintain social distancing</strong> - Stay at least 6 feet from others in public</li>
+                    <li><strong>Wash hands frequently</strong> - Use soap and water for at least 20 seconds</li>
+                    <li><strong>Use hand sanitizer</strong> - When soap and water aren't available</li>
+                    <li><strong>Cover coughs and sneezes</strong> - Use a tissue or your elbow</li>
+                    <li><strong>Clean and disinfect</strong> - Frequently touched surfaces daily</li>
+                    <li><strong>Monitor your health</strong> - Watch for symptoms and get tested if needed</li>
+                </ol>
+            </div>
+            
+            <div class="card">
+                <h2>If You're Sick</h2>
+                <ul>
+                    <li>Stay home except to get medical care</li>
+                    <li>Separate yourself from other people in your home</li>
+                    <li>Wear a mask around others</li>
+                    <li>Cover your coughs and sneezes</li>
+                    <li>Wash your hands often</li>
+                    <li>Avoid sharing personal household items</li>
+                    <li>Clean all high-touch surfaces daily</li>
+                    <li>Monitor your symptoms and seek medical care if they worsen</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Details Section -->
+    <div id="details" class="section">
+        <div class="container">
+            <h1>COVID-19 Statistics</h1>
+            
+            <div class="card">
+                <h2>Current Global Situation</h2>
+                <div class="stats-container">
+                    <div class="stat-card confirmed">
+                        <h3>Confirmed Cases</h3>
+                        <div class="stat-value">675M</div>
+                        <p>Worldwide total</p>
+                    </div>
+                    
+                    <div class="stat-card recovered">
+                        <h3>Recovered</h3>
+                        <div class="stat-value">650M</div>
+                        <p>Successful recoveries</p>
+                    </div>
+                    
+                    <div class="stat-card deaths">
+                        <h3>Deaths</h3>
+                        <div class="stat-value">6.87M</div>
+                        <p>Global fatalities</p>
+                    </div>
+                </div>
+                
+                <h3>Recent Trends</h3>
+                <p>As of June 2023, most countries are seeing stable or declining case numbers. New variants continue to emerge but generally cause less severe illness than earlier strains.</p>
+            </div>
+            
+            <div class="card">
+                <h2>Vaccination Progress</h2>
+                <p>Global vaccination efforts continue:</p>
+                <ul>
+                    <li><strong>Total doses administered:</strong> 5.5 billion</li>
+                    <li><strong>Fully vaccinated:</strong> 65% of global population</li>
+                    <li><strong>At least one dose:</strong> 72% of global population</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Contact Section -->
+    <div id="contact" class="section">
+        <div class="container">
+            <h1>COVID-19 Contact Information</h1>
+            
+            <div class="card">
+                <h2>Emergency Contacts</h2>
+                <ul>
+                    <li><strong>Medical Emergency:</strong> Dial 911 (or local emergency number)</li>
+                    <li><strong>COVID-19 Hotline:</strong> 1-800-COVID19 (1-800-268-4319)</li>
+                    <li><strong>Poison Control:</strong> 1-800-222-1222</li>
+                    <li><strong>Disaster Distress Helpline:</strong> 1-800-985-5990</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h2>Government Health Agencies</h2>
+                <ul>
+                    <li><strong>Centers for Disease Control (CDC):</strong>
+                        <br>Phone: 1-800-CDC-INFO (1-800-232-4636)
+                        <br>Email: cdcinfo@cdc.gov</li>
+                    <li><strong>World Health Organization (WHO):</strong>
+                        <br>Phone: +41 22 791 21 11
+                        <br>Email: info@who.int</li>
+                    <li><strong>Local Health Department:</strong>
+                        <br>Contact information available on your state/city website</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h2>Testing and Vaccination</h2>
+                <ul>
+                    <li><strong>Testing Locations:</strong> Visit your state health department website</li>
+                    <li><strong>Vaccination Sites:</strong> Check vaccines.gov for locations near you</li>
+                    <li><strong>Pharmacy Vaccinations:</strong> Contact major pharmacies like CVS, Walgreens, or Rite Aid</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Function to show the selected section and hide others
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.getElementsByClassName('section');
+            for (let i = 0; i < sections.length; i++) {
+                sections[i].style.display = 'none';
+            }
+            
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+            
+            // Update active menu item
+            const menuItems = document.querySelectorAll('.menu-bar a');
+            for (let i = 0; i < menuItems.length; i++) {
+                menuItems[i].classList.remove('active');
+            }
+            
+            // Find and activate the corresponding menu item
+            const activeItem = document.querySelector(`.menu-bar a[href="#${sectionId}"]`);
+            if (activeItem) {
+                activeItem.classList.add('active');
+            }
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
